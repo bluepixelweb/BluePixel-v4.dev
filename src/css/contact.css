@@ -69,10 +69,19 @@
     /* 12px - 20px */
     margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
     color: var(--headerColor);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #cs-contact #cs-form .cs-label-message {
     /* 32px - 48px */
@@ -88,7 +97,9 @@
     border: 1px solid #B4B2C7;
     border-radius: 0.5rem;
     /* prevents border & padding from affecting height */
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: border .3s;
     transition: border .3s;
   }
   #cs-contact #cs-form input:hover,
@@ -120,7 +131,8 @@
     position: relative;
     z-index: 1;
     /* prevents padding from adding to the width */
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   #cs-contact .cs-button-solid:before {
     content: '';
@@ -133,6 +145,7 @@
     left: 0;
     z-index: -1;
     border-radius: 0.25rem;
+    -webkit-transition: width .3s;
     transition: width .3s;
   }
   #cs-contact .cs-button-solid:hover {
@@ -151,10 +164,19 @@
     border-radius: 0.5rem;
     /* cuts off corners on img tag */
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   #cs-contact .cs-header {
     /* 16px - 20px */
@@ -187,6 +209,7 @@
     display: block;
     bottom: -0.125rem;
     left: 0;
+    -webkit-transition: width .3s;
     transition: width .3s;
   }
   #cs-contact .cs-link:hover:before {
@@ -207,7 +230,10 @@
     top: 0;
     left: 0;
     z-index: -1;
+    -webkit-transition: -webkit-transform .6s;
+    transition: -webkit-transform .6s;
     transition: transform .6s;
+    transition: transform .6s, -webkit-transform .6s;
   }
   #cs-contact .cs-bg-picture:before {
     /* background color overlay */
@@ -216,6 +242,7 @@
     display: block;
     height: 100%;
     width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
     top: 0;
     left: 0;
@@ -228,16 +255,24 @@
     height: 100%;
     width: 100%;
     /* Makes img tag act as a background image */
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 /* Tablet - 700px */
 @media only screen and (min-width: 43.75em) {
   #cs-contact #cs-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   #cs-contact #cs-form label {
     width: 48%;
@@ -250,9 +285,15 @@
 @media only screen and (min-width: 64em) {
   #cs-contact .cs-container {
     max-width: 80rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     gap: 5rem;
   }
   #cs-contact #cs-form {
@@ -267,10 +308,13 @@
     width: 40%;
     max-width: 33.875rem;
     /* prevents flexbox from squishing it */
-    flex: none;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
   }
   #cs-contact .cs-right-section:hover .cs-bg-picture {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   #cs-contact .cs-block {
     /* goes back to inline so it stays "in line" with the rest of the text */
@@ -280,7 +324,8 @@
 /* Small Desktop - 1300px */
 @media only screen and (min-width: 81.25em) {
   #cs-contact #cs-form {
-    column-gap: 0rem;
+    -webkit-column-gap: 0rem;
+            column-gap: 0rem;
   }
   #cs-contact #cs-form label {
     width: 48%;
@@ -305,11 +350,31 @@
     background-color: transparent;
     color: var(--bodyTextColorWhite);
   }
+  body.dark-mode #cs-contact #cs-form label::-webkit-input-placeholder,
+  body.dark-mode #cs-contact #cs-form input::-webkit-input-placeholder,
+  body.dark-mode #cs-contact #cs-form textarea::-webkit-input-placeholder {
+    /* lighten up the color of the text by 40%*/
+    -webkit-filter: brightness(1.4);
+            filter: brightness(1.4);
+  }
+  body.dark-mode #cs-contact #cs-form label:-ms-input-placeholder,
+  body.dark-mode #cs-contact #cs-form input:-ms-input-placeholder,
+  body.dark-mode #cs-contact #cs-form textarea:-ms-input-placeholder {
+    /* lighten up the color of the text by 40%*/
+    filter: brightness(1.4);
+  }
+  body.dark-mode #cs-contact #cs-form label::-ms-input-placeholder,
+  body.dark-mode #cs-contact #cs-form input::-ms-input-placeholder,
+  body.dark-mode #cs-contact #cs-form textarea::-ms-input-placeholder {
+    /* lighten up the color of the text by 40%*/
+    filter: brightness(1.4);
+  }
   body.dark-mode #cs-contact #cs-form label::placeholder,
   body.dark-mode #cs-contact #cs-form input::placeholder,
   body.dark-mode #cs-contact #cs-form textarea::placeholder {
     /* lighten up the color of the text by 40%*/
-    filter: brightness(1.4);
+    -webkit-filter: brightness(1.4);
+            filter: brightness(1.4);
   }
   body.dark-mode #cs-contact .cs-bg-picture {
     background-color: #000;

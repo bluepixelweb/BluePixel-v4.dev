@@ -37,18 +37,21 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   body.dark-mode #dark-mode-toggle .sun {
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     opacity: 1;
   }
   body.dark-mode #dark-mode-toggle .moon {
-    transform: translate(-50%, -150%);
+    -webkit-transform: translate(-50%, -150%);
+            transform: translate(-50%, -150%);
     opacity: 0;
   }
   #dark-mode-toggle {
     display: block;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     right: 3.75rem;
     width: 3rem;
     height: 3rem;
@@ -62,21 +65,29 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 1.5625rem;
     height: 1.5625rem;
     pointer-events: none;
   }
   #dark-mode-toggle .moon {
     z-index: 2;
+    -webkit-transition: opacity .3s, fill .3s, -webkit-transform .3s;
+    transition: opacity .3s, fill .3s, -webkit-transform .3s;
     transition: transform .3s, opacity .3s, fill .3s;
+    transition: transform .3s, opacity .3s, fill .3s, -webkit-transform .3s;
     fill: #000;
   }
   #dark-mode-toggle .sun {
     z-index: 1;
-    transform: translate(-50%, 100%);
+    -webkit-transform: translate(-50%, 100%);
+            transform: translate(-50%, 100%);
     opacity: 0;
+    -webkit-transition: opacity .3s, -webkit-transform .3s;
+    transition: opacity .3s, -webkit-transform .3s;
     transition: transform .3s, opacity .3s;
+    transition: transform .3s, opacity .3s, -webkit-transform .3s;
   }
 }
 /* Desktop */
@@ -85,7 +96,8 @@
     position: relative;
     top: auto;
     right: auto;
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
     margin-left: 1.875rem;
     margin-bottom: 0rem;
   }
