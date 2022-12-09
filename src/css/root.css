@@ -348,19 +348,6 @@
     position: relative;
     font-weight: bold;
   }
-  #navigation #navbar-menu ul li a.active:before {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 0.5rem;
-    background: var(--primary);
-    opacity: 1;
-    bottom: 5rem;
-    border-radius: 0.25rem;
-    left: -0.375rem;
-    right: -0.375rem;
-    z-index: -1;
-  }
   #navigation #navbar-menu.open {
     height: 22.25rem;
     padding-top: 1.25rem;
