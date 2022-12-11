@@ -27,6 +27,14 @@ const disableDarkMode = () => {
 if (darkMode == "enabled") {
   enableDarkMode();
 }
+//check user's OS level dark mode preference
+const darkModePreference = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Check if the user has a preference for dark mode
+if (darkModePreference.matches) {
+  // If the user has a preference for dark mode, enable it
+  enableDarkMode();
+}
 
 // add event listener to the dark mode button toggle
 darkModeToggle.addEventListener('click', () => {
