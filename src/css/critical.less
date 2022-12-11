@@ -6,7 +6,8 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
 
-    #hero {
+
+   #hero {
         font-family: 'Roboto', 'Arial', sans-serif;
         /* Centers button */
         text-align: center;
@@ -18,7 +19,34 @@
         /* prevents overflow from the lines extending past the screen width */
         overflow: hidden;
 
-        .cs-picture {
+		/* Animated Gradient Background */
+		background: linear-gradient(61deg, var(--gradient1), var(--gradient2), var(--gradient3));
+		background-size: 600% 600%;
+	
+		-webkit-animation: AnimationName 23s ease infinite;
+		-moz-animation: AnimationName 23s ease infinite;
+		animation: AnimationName 23s ease infinite;
+	
+		
+		@-webkit-keyframes AnimationName {
+			0%{background-position:0% 67%}
+			50%{background-position:100% 34%}
+			100%{background-position:0% 67%}
+		}
+		@-moz-keyframes AnimationName {
+			0%{background-position:0% 67%}
+			50%{background-position:100% 34%}
+			100%{background-position:0% 67%}
+		}
+		@keyframes AnimationName {
+			0%{background-position:0% 67%}
+			50%{background-position:100% 34%}
+			100%{background-position:0% 67%}
+		}
+
+
+
+		.cs-picture {
             /* Background Image */
             width: 100%;
             height: 100%;
@@ -258,7 +286,7 @@
 /* Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25em) {
     #hero {
-        background: url("/assets/images/landing.jpg");
+        /*background: url("/assets/images/landing.jpg");
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -284,6 +312,11 @@
             }
         }
     }
+}
+.dark-mode #main #hero {
+	background: linear-gradient(61deg, var(--darkgradient1), var(--darkgradient2), var(--darkgradient3));
+	background-size: 600% 600%;
+
 }
                                 
 /*-- -------------------------- -->

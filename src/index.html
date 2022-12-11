@@ -14,7 +14,6 @@ block
 -->
 
 {% block preload %}
-<link rel="preload" as="image" href="/assets/images/landing.jpg">
 {% endblock %}
 
 {% block pageCSS %}
@@ -32,23 +31,22 @@ block
 <!-- ============================================ -->
 
 <section id="hero">
-    <div class="cs-container">
+    <div class="cs-container gradient">
         <div class="cs-flex-group">
-            <span class="cs-topper">Greater Cleveland Web Design</span>
             <h1 class="cs-title">Fast. Affordable. Hand-coded.</h1>
             <p class="cs-text">
-                That's the promise you get from BluePixel.dev. <br>We get small businesses, because we are a small business.
+                We're making well built, beautifully designed websites affordable for small businesses.
             </p>
             <a href="/contact" class="cs-button-solid">Contact Us</a>
         </div>
     </div>
 
-    <!-- Background Image -->
+    <!-- Background Image
     <picture class="cs-picture" aria-hidden="true">
         <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
         <source media="(min-width: 601px)" srcset="/assets/images/landing.webp">
         <img loading="lazy" decoding="async" src="/assets/images/landing.jpg" alt="mountains" width="2250" height="1500">
-    </picture>
+    </picture> -->
 </section>
                                 
 
@@ -89,7 +87,7 @@ block
 </section>
 
 <!-- ============================================ -->
-<!--            Performance             -->
+<!--                 Performance                  -->
 <!-- ============================================ -->
 
 <section id="sbs-r">
@@ -100,11 +98,6 @@ block
                 <source media="(max-width: 600px)" srcset="/assets/images/construction.jpg">
                 <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
                 <img loading="lazy" decoding="async" src="/assets/images/construction.jpg" alt="house" width="414" height="400">
-            </picture>
-            <picture class="cs-picture cs-picture2" aria-hidden="true">
-                <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.webp">
-                <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/cabinets2.jpg" alt="house" width="522" height="581">
             </picture>
         </div>
 
@@ -121,7 +114,7 @@ block
 
 
 <!-- ============================================ -->
-<!--                 Custom Developed                 -->
+<!--               Custom Developed               -->
 <!-- ============================================ -->
 
 <section id="sbs">
@@ -132,11 +125,6 @@ block
                 <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.webp">
                 <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
                 <img loading="lazy" decoding="async" src="/assets/images/cabinets2.jpg" alt="house" width="522" height="581">
-            </picture>
-            <picture class="cs-picture cs-picture2" aria-hidden="true">
-                <source media="(max-width: 600px)" srcset="/assets/images/construction.jpg">
-                <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/construction.jpg" alt="house" width="414" height="400">
             </picture>
         </div>
         <!-- Right Content Section-->
@@ -150,6 +138,18 @@ block
             <a href="/about" class="button-solid">Learn More</a>
         </div>
     </div>
+</section>
+
+<!-- ============================================ -->
+<!--                    Pricing                   -->
+<!-- ============================================ -->
+<section id="sbs">
+	<div class="cs-container">
+		<!-- Left Paragraph Section -->
+		<div class="cs-left">
+			<h2 class="cs-title">$0 Down,<br>$150 per month*.</h2>
+		</div>
+	</div>
 </section>
 
 

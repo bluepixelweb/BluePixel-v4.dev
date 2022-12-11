@@ -10,6 +10,9 @@
     --bodyTextColor: #4E4B66;
     --bodyTextColorWhite: #FAFBFC;
     --headerColor: #1a1a1a;
+    --gradient1: #3a7ff2;
+    --gradient2: #c071f1;
+    --gradient3: #3380c5;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */

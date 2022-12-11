@@ -14,6 +14,33 @@
     z-index: 1;
     /* prevents overflow from the lines extending past the screen width */
     overflow: hidden;
+    /* Animated Gradient Background */
+    background: linear-gradient(61deg, var(--gradient1), var(--gradient2), var(--gradient3));
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 23s ease infinite;
+    animation: AnimationName 23s ease infinite;
+  }
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 67%;
+    }
+    50% {
+      background-position: 100% 34%;
+    }
+    100% {
+      background-position: 0% 67%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 67%;
+    }
+    50% {
+      background-position: 100% 34%;
+    }
+    100% {
+      background-position: 0% 67%;
+    }
   }
   #hero .cs-picture {
     /* Background Image */
@@ -259,11 +286,11 @@
 /* Desktop Parallax Effect - 1300px */
 @media only screen and (min-width: 81.25em) {
   #hero {
-    background: url("/assets/images/landing.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* creates parallax effect on background image */
+    /*background: url("/assets/images/landing.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+        /* creates parallax effect on background image */
     background-attachment: fixed;
     /* remove img tag so we can make parallax work */
   }
@@ -276,6 +303,10 @@
   body.dark-mode #hero .cs-background:before {
     opacity: .8;
   }
+}
+.dark-mode #main #hero {
+  background: linear-gradient(61deg, var(--darkgradient1), var(--darkgradient2), var(--darkgradient3));
+  background-size: 600% 600%;
 }
 /*-- -------------------------- -->
 <---          Services          -->

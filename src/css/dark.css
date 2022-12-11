@@ -4,9 +4,12 @@
 /* Mobile */
 @media only screen and (min-width: 0em) {
   :root {
-    --dark: #082032;
+    --dark: #1c1b20;
     --medium: #2C394B;
     --accent: #334756;
+    --darkgradient1: #003598;
+    --darkgradient2: #550d7f;
+    --darkgradient3: #054985;
   }
   body.dark-mode {
     background-color: var(--dark);
