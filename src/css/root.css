@@ -1,6 +1,12 @@
 /*-- -------------------------- -->
 <---        Core Styles         -->
 <--- -------------------------- -*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 /* Mobile */
 @media only screen and (min-width: 0em) {
   :root {
